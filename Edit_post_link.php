@@ -1,0 +1,4 @@
+<?php
+<?php edit_post_link(); ?>
+
+?>
