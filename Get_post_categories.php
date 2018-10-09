@@ -1,0 +1,1 @@
+<?php echo get_the_category_list(', '); ?> // Tanda koma untuk memisahkan kategori
