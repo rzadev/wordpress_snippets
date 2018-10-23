@@ -1,7 +1,46 @@
 <?php
 
-// Tulis di functions.php
+// Tulis di functions.php atau di folder mu-plugins (nama file-post-type.php)
+<?php
+// Create custom post type
+function university_post_types()
+{
+	register_post_type('event', array(
+    'supports' => array('title', 'editor', 'excerpt'),
+    'rewrite' => array('slug' => 'events'),
+    'has_archive' => true,
+		'public' => true,
+		'labels' => array(
+      'name' => 'Events',
+      'add_new_item' => 'Add New Event',
+      'edit_item' => 'Edit Event',
+      'all_items' => 'All Events',
+      'singular_name' => 'Event'
+		),
+		'menu_icon' => 'dashicons-calendar'
+	));
+}
 
+add_action('init', 'university_post_types');
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Contoh 2
 // Add actions
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 
